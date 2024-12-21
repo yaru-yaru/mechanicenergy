@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kinetic Energy</title>
+    <style>
+        body {
+            margin: 0;
+            background-image: url('https://images.ortmoragency.com/blogs/1fd82e50-8081-461e-9674-16780417b346.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            margin: 0;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 48px;
+            font-weight: bold;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .content-container {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border: 3px solid white;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+            margin: 20px;
+            max-width: 500px;
+        }
+
+        .text-overlay {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            text-shadow: 3px 3px 8px black;
+            max-width: 400px;
+        }
+
+        
+        
+        .image-container img {
+            max-width: 150px;
+            height: auto;
+            border-radius: 10px;
+            border: 2px solid white;
+        }
+        
+        .calculator-container {
+            margin-top: 40px;
+            left: 100px;
+            color: white;
+            text-shadow: 3px 3px 8px black;
+            font-size: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            padding: 30px;
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 15px;
+            border: 3px solid white;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+            width: 250px;
+        }
+        
+        .calculator-container input {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid white;
+        }
+
+        .calculator-container button {
+            padding: 10px;
+            font-size: 16px;
+            color: white;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .calculator-container button:hover {
+            background-color: #0056b3;
+        }
+
+        .calculator-container .result {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        
+        </style>
+
+        <style>
+            .gif-container {
+                position: absolute;
+                top: 200px;
+                right: 350px;
+                width: 90%;
+                text-align: right;
+            }
+
+            .gif-container img {
+                width: 600px;
+                height: auto;
+            }
+
+        </style>
+
+        <div class="gif-container">
+            <img src="https://clipart-library.com/8300/1931/roller-coaster-thrill-ride-sticker-5m2gt9nezskb780g.gif" alt="Kinetic Energy">
+        </div>
+<body>
+    <h1>Kinetic Energy</h1>
+    <div class="content-container">
+        <div class="text-overlay">
+        Кинетикалық энергия – механикалық жүйе нүктелерінің жылдамдығы бойынша анықталатын энергия. Материалдық нүктенің Кинетикалық энергиясы (Т) мынаған тең: T=mv^2/2, мұндағы m – материалдық нүктенің массасы, v – материалдық нүктенің жылдамдығы.
+    </div>
+
+    
+    <div class="image-container">
+        <img src="data:image/png;base64,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" alt="Кинетикалык энергия">
+    </div>
+
+    
+
+    <div class="calculator-container" style="position: absolute; right: 80px; bottom: 50px;">
+        <label for="mass">Масса (кг):</label>
+        <input type="number" id="mass"placeholder="Масса (кг)">
+
+        <label for="velocity">Жылдамдык (м/с):</label>
+        <input type="number" id="velocity" placeholder="Скорость (м/с)">
+
+        <button onclick="calculateEnergy()">Энергияны табу</button>
+
+        <div class="result" id="result">Жауабы</div>
+
+        <script>
+            function calculateEnergy() {
+                const mass = parseFloat(document.getElementById('mass').value);
+                const velocity = parseFloat(document.getElementById('velocity').value);
+if (isNaN(mass) || isNaN(velocity)) {
+                    document.getElementById('result').innerText = "Пожалуйста, введите корректные значения.";
+                    return;
+                }
+
+                const kineticEnergy = 0.5 * mass * Math.pow(velocity, 2);
+
+                document.getElementById('result').innerText = `Кинетикалык энергиясы: ${kineticEnergy.toFixed(2)} Дж`;
+            }
+        </script>
+
+</body>
+</html>

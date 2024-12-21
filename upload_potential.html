@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Potential Energy</title>
+    <style>
+        body {
+            margin: 0;
+            background-image: url('https://hardscienceainthard.com/wp-content/uploads/2024/06/temp-virial-tsunami.png?w=800');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            display: flex;
+            flex-direction: column;
+            padding-left: 20px;
+        }
+
+        h1 {
+            margin: 0;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 48px;
+            font-weight: bold;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5);
+            width: 100%;
+            
+        }
+
+        .main-container {
+            display: flex;
+            flex-direction:row; 
+            justify-content: flex-start; 
+            gap: 10px;
+            align-items: flex-start;
+            width: 100%;
+        }
+
+        .content-container {
+            display: flex;
+            flex-direction: column; 
+            gap: 10px;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border: 3px solid white;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+            width: 500px;
+        }
+
+        .text-overlay {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            text-shadow: 3px 3px 8px black;
+            max-width: 400px;
+        }
+        
+        .image-container img {
+            max-width: 150px;
+            height: auto;
+            border-radius: 10px;
+            border: 2px solid white;
+        }
+
+        .calculator-container {
+            color: white;
+            text-shadow: 3px 3px 8px black;
+            font-size: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            padding: 30px;
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 15px;
+            border: 3px solid white;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+            width: 300px;
+        }
+        
+        .calculator-container input {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid white;
+        }
+
+        .calculator-container button {
+            padding: 10px;
+            font-size: 16px;
+            color: white;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .calculator-container button:hover {
+            background-color: #0056b3;
+        }
+
+        .calculator-container .result {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .gif-container {
+            position: relative;
+            width: 600px;
+            top: 150px;
+            right: -200px;
+            text-align: center;
+        }
+
+        .gif-container img {
+            width: 600px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Potential Energy</h1>
+
+    <div class="main-container">
+        
+        <div class="content-container">
+            <div class="text-overlay">
+                Потенциалдық энергия — жүйенің толық механикалық энергиясының бір бөлігі. Ол жүйені құрайтын материалдық бөлшектердің өзара орналасуына және олардың сыртқы күш өрісіндегі (мысалы, гравитация өрісі) орнына байланысты анықталады.
+            </div>
+
+            <div class="calculator-container">
+                <label for="mass">Масса (кг):</label>
+                <input type="number" id="mass" placeholder="Масса (кг)">
+
+
+<label for="height">Биыктык (м):</label>
+                <input type="number" id="height" placeholder="Биыктык (м)">
+
+                <button onclick="calculatePotentialEnergy()">Потенциалдык энергияны табу</button>
+
+                <div class="result" id="result">Жауабы</div>
+            </div>
+        </div>
+
+        
+        <div class="gif-container">
+            <img src="https://technologystudent.com/forcmom/mechic15.gif">
+        </div>
+    </div>
+
+    <script>
+        function calculatePotentialEnergy() {
+            const mass = parseFloat(document.getElementById('mass').value);
+            const height = parseFloat(document.getElementById('height').value);
+
+            if (isNaN(mass) || isNaN(height)) {
+                document.getElementById('result').innerText = "Пожалуйста, введите корректные значения.";
+                return;
+            }
+
+            const gravity = 9.8;
+            const potentialEnergy = mass * height * gravity;
+
+            document.getElementById('result').innerText = `Потенциалдык энергиясы ${potentialEnergy.toFixed(2)} Дж`;
+        }
+    </script>
+</body>
+</html>

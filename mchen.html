@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mechanic Energy</title>
+    <style>
+        body {
+            margin: 0; 
+            height: 100vh; 
+            background-image: url('https://images.stockcake.com/public/a/e/6/ae607e6e-945a-4929-8b31-b2e1f8c65f8d_large/cyborg-harnessing-energy-stockcake.jpg'); 
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        .text-container {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            color: aliceblue;
+            font-family: 'Arial', sans-serif;
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        .mechanic {
+            font-size: 100px;
+            line-height: 1;
+        }
+
+        .energy {
+            font-size: 150px;
+            line-height: 1;
+        }
+        
+        .buttons-container {
+            position: absolute;
+            top: 300px;
+            right: 150px;
+            display: flex;
+            flex-direction: column;
+            gap: 140px;
+        }
+
+        .button {
+            font-size: 55px;
+            padding: 20px 40px;
+            background-color: rgb(181, 255, 200);
+            border: 2px solid rgb(19, 67, 28);
+            border-radius: 10px;
+            text-decoration: none;
+            color: darkorchid;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: rgba(255, 255, 255, 1);
+        }
+    </style>
+</head>
+<body>
+    <div class="text-container">
+        <div class="mechanic">Mechanic</div>
+        <div class="energy">Energy</div>
+    </div>
+    <div class="buttons-container">
+       
+        <a href="upload_kinetic.html" class="button">Kinetic Energy</a>
+        <a href="upload_potential.html" class="button">Potential Energy</a>
+    </div>
+</body>
+</html>
